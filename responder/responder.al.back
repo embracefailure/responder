@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+    <Project_Created_Time>2021-06-23 14:19:24</Project_Created_Time>
+    <TD_Version>4.6.30127</TD_Version>
+    <UCode>00000000</UCode>
+    <Name>responder</Name>
+    <HardWare>
+        <Family>EG4</Family>
+        <Device>EG4S20BG256</Device>
+    </HardWare>
+    <Source_Files>
+        <Verilog>
+            <File>responder.v</File>
+            <File>Sel_module.v</File>
+            <File>Timer_module.v</File>
+            <File>Buzzer_module.v</File>
+            <File>Digitron_NumDisplay.v</File>
+            <File>key_filter.v</File>
+        </Verilog>
+        <ADC_FILE>responder.adc</ADC_FILE>
+        <SDC_FILE/>
+        <CWC_FILE/>
+    </Source_Files>
+    <TOP_MODULE>
+        <LABEL/>
+        <MODULE>responder</MODULE>
+        <CREATEINDEX>auto</CREATEINDEX>
+    </TOP_MODULE>
+    <Project_Settings>
+        <Step_Last_Change>2021-07-14 19:40:50</Step_Last_Change>
+        <Current_Step>60</Current_Step>
+        <Step_Status>true</Step_Status>
+    </Project_Settings>
+</Project>

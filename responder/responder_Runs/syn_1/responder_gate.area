@@ -1,0 +1,45 @@
+standard
+***Report Model: responder Device: EG4S20BG256***
+
+IO Statistics
+#IO                        39
+  #input                   13
+  #output                  26
+  #inout                    0
+
+LUT Statistics
+#Total_luts               360
+  #lut4                   167
+  #lut5                    47
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b             146
+
+Utilization Statistics
+#lut                      360   out of  19600    1.84%
+#reg                      207   out of  19600    1.06%
+#le                         0
+#dsp                        1   out of     29    3.45%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       39   out of    188   20.74%
+  #ireg                     4
+  #oreg                    14
+  #treg                     0
+#pll                        0   out of      4    0.00%
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------+
+|Instance |Module              |lut     |ripple  |seq     |bram    |dsp     |
++---------------------------------------------------------------------------+
+|top      |responder           |214     |146     |225     |0       |1       |
+|  U1     |Sel_module          |39      |26      |36      |0       |0       |
+|  U2     |Timer_module        |52      |26      |43      |0       |0       |
+|  U3     |Buzzer_module       |15      |24      |27      |0       |0       |
+|  U4     |Digitron_NumDisplay |61      |17      |26      |0       |0       |
+|  U5     |key_filter          |10      |21      |24      |0       |0       |
+|  U6     |led8_module         |21      |24      |27      |0       |0       |
+|  U7     |countdown_module    |16      |8       |24      |0       |1       |
++---------------------------------------------------------------------------+

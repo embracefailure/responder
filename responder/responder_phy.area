@@ -1,0 +1,64 @@
+standard
+***Report Model: responder***
+
+IO Statistics
+#IO                    32
+  #input                7
+  #output              25
+  #inout                0
+
+Utilization Statistics
+#lut                  260   out of  19600    1.33%
+#reg                  149   out of  19600    0.76%
+#le                   271
+  #lut only           122   out of    271   45.02%
+  #reg only            11   out of    271    4.06%
+  #lut&reg            138   out of    271   50.92%
+#dsp                    0   out of     29    0.00%
+#bram                   0   out of     64    0.00%
+  #bram9k               0
+  #fifo9k               0
+#bram32k                0   out of     16    0.00%
+#pad                   32   out of    188   17.02%
+  #ireg                 4
+  #oreg                 8
+  #treg                 0
+#pll                    0   out of      4    0.00%
+
+
+Detailed IO Report
+
+Name                  Direction     Location     IOStandard     DriveStrength     PullType     PackReg                  
+CLK                   INPUT         R7           LVCMOS33       N/A               PULLUP       NONE                     
+Key_In[3]             INPUT         F10          LVCMOS33       N/A               PULLUP       IREG                     
+Key_In[2]             INPUT         C11          LVCMOS33       N/A               PULLUP       IREG                     
+Key_In[1]             INPUT         D11          LVCMOS33       N/A               PULLUP       IREG                     
+Key_In[0]             INPUT         E11          LVCMOS33       N/A               PULLUP       IREG                     
+RSTn                  INPUT         A9           LVCMOS33       N/A               PULLUP       NONE                     
+Start                 INPUT         A10          LVCMOS33       N/A               PULLUP       NONE                     
+Buzzer_Out            OUTPUT        H11          LVCMOS33       8                 NONE         NONE                     
+DigitronCS_Out[3]     OUTPUT        A3           LVCMOS33       8                 NONE         NONE                     
+DigitronCS_Out[2]     OUTPUT        A5           LVCMOS33       8                 NONE         NONE                     
+DigitronCS_Out[1]     OUTPUT        B6           LVCMOS33       8                 NONE         NONE                     
+DigitronCS_Out[0]     OUTPUT        C9           LVCMOS33       8                 NONE         NONE                     
+Digitron_Out[7]       OUTPUT        C8           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[6]       OUTPUT        A8           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[5]       OUTPUT        B5           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[4]       OUTPUT        A7           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[3]       OUTPUT        E8           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[2]       OUTPUT        B8           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[1]       OUTPUT        A6           LVCMOS33       8                 NONE         OREG                     
+Digitron_Out[0]       OUTPUT        A4           LVCMOS33       8                 NONE         OREG                     
+Key_Row[3]            OUTPUT        E10          LVCMOS33       8                 NONE         NONE                     
+Key_Row[2]            OUTPUT        C10          LVCMOS33       8                 NONE         NONE                     
+Key_Row[1]            OUTPUT        F9           LVCMOS33       8                 NONE         NONE                     
+Key_Row[0]            OUTPUT        D9           LVCMOS33       8                 NONE         NONE                     
+LED_Out[6]            OUTPUT        E16          LVCMOS33       8                 NONE         NONE                     
+LED_Out[5]            OUTPUT        E13          LVCMOS33       8                 NONE         NONE                     
+LED_Out[4]            OUTPUT        C16          LVCMOS33       8                 NONE         NONE                     
+LED_Out[3]            OUTPUT        C15          LVCMOS33       8                 NONE         NONE                     
+LED_Out[2]            OUTPUT        B16          LVCMOS33       8                 NONE         NONE                     
+LED_Out[1]            OUTPUT        B15          LVCMOS33       8                 NONE         NONE                     
+LED_Out[0]            OUTPUT        B14          LVCMOS33       8                 NONE         NONE                     
+LED_OverTime_Out      OUTPUT        F16          LVCMOS33       8                 NONE         NONE                     
+

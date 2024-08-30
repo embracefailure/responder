@@ -1,0 +1,81 @@
+// Verilog testbench created by TD v5.6.71036
+// 2024-07-26 10:22:00
+
+`timescale 1ns / 1ps
+
+module responder_tb();
+
+reg CLK;
+reg [3:0] Key_In;
+reg RSTn;
+reg Start;
+wire Buzzer_Out;
+wire [3:0] DigitronCS_Out;
+wire [7:0] Digitron_Out;
+wire [3:0] Key_Row;
+wire [3:0] LED_Out;
+wire LED_OverTime_Out;
+wire [3:0] LED_Run;
+
+//Clock process
+parameter PERIOD = 10;
+always #(PERIOD/2) CLK = ~CLK;
+
+//glbl Instantiate
+glbl glbl();
+
+//Unit Instantiate
+responder uut(
+	.CLK(CLK),
+	.Key_In(Key_In),
+	.RSTn(RSTn),
+	.Start(Start),
+	.Buzzer_Out(Buzzer_Out),
+	.DigitronCS_Out(DigitronCS_Out),
+	.Digitron_Out(Digitron_Out),
+	.Key_Row(Key_Row),
+	.LED_Out(LED_Out),
+	.LED_OverTime_Out(LED_OverTime_Out),
+	.LED_Run(LED_Run)
+);
+
+//Stimulus process
+initial begin
+	CLK = 0;
+    Key_In = 4'b0001;
+    RSTn = 0;
+    Start = 0;
+    // Wait 100 ns for global reset to finish
+    #100;
+
+    // Apply reset
+    RSTn = 1; // Deassert reset
+
+    // Wait 100 ns after reset is deasserted
+    #100;
+
+    // Apply test inputs
+    Start = 1; // Assert Start
+    #20;
+    Start = 0; // Deassert Start
+
+    // Simulate some key presses
+    Key_In = 4'b0001; // Press key 1
+    #20;
+    Key_In = 4'b0010; // Press key 2
+    #20;
+    //Key_In = 4'b0100; // Press key 3
+    #20;
+    //Key_In = 4'b1000; // Press key 4
+    #20;
+    //Key_In = 4'b0000; // Release all keys
+
+    // Continue simulation for some time
+    #5000000;
+
+    // Stop simulation
+    $stop;
+//To be inserted
+end
+
+endmodule

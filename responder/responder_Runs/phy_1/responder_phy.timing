@@ -1,0 +1,684 @@
+=========================================================================================================
+Auto created by Tang Dynasty v5.6.71036
+   Copyright (c) 2012-2023 Anlogic Inc.
+Sat Jul 27 21:12:10 2024
+=========================================================================================================
+
+
+Top Model:                responder                                                       
+Device:                   eagle_s20                                                       
+Timing Constraint File:                                                                   
+STA Level:                Detail                                                          
+Speed Grade:              NA                                                              
+
+=========================================================================================================
+Timing constraint:        clock: DeriveClock                                              
+Clock = DeriveClock, period 20ns, rising at 0ns, falling at 10ns
+
+504 endpoints analyzed totally, and 18954 paths analyzed
+2 errors detected : 2 setup errors (TNS = -0.038), 0 hold errors (TNS = 0.000)
+Minimum period is 20.076ns
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/reg1_syn_48 (956 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):    -0.038 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_48.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.922ns  (logic 6.115ns, net 3.807ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[1]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_42.a[0] (U7/Change_Time_b[2])                   net  (fanout = 1)       0.811 r     8.788                    
+ U2/reg1_syn_42.fco                                          cell (ADDER)            0.706 r     9.494
+ U2/reg1_syn_45.fci (U7/add0_syn_41)                         net  (fanout = 1)       0.000 f     9.494      ../../countdown_module.v(51)
+ U2/reg1_syn_45.fco                                          cell (ADDER)            0.073 r     9.567
+ U2/reg1_syn_48.fci (U7/add0_syn_43)                         net  (fanout = 1)       0.000 f     9.567      ../../countdown_module.v(51)
+ U2/reg1_syn_48                                              path2reg1 (ADDER)       0.355       9.922
+ Arrival time                                                                        9.922                  (6 lvl)       
+
+ U2/reg1_syn_48.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -0.038ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):    -0.035 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_48.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.919ns  (logic 6.109ns, net 3.810ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[0]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_39.a[1] (U7/Change_Time_b[1])                   net  (fanout = 1)       0.814 r     8.791                    
+ U2/reg1_syn_39.fco                                          cell (ADDER)            0.627 r     9.418
+ U2/reg1_syn_42.fci (U7/add0_syn_39)                         net  (fanout = 1)       0.000 f     9.418      ../../countdown_module.v(51)
+ U2/reg1_syn_42.fco                                          cell (ADDER)            0.073 r     9.491
+ U2/reg1_syn_45.fci (U7/add0_syn_41)                         net  (fanout = 1)       0.000 f     9.491      ../../countdown_module.v(51)
+ U2/reg1_syn_45.fco                                          cell (ADDER)            0.073 r     9.564
+ U2/reg1_syn_48.fci (U7/add0_syn_43)                         net  (fanout = 1)       0.000 f     9.564      ../../countdown_module.v(51)
+ U2/reg1_syn_48                                              path2reg1 (ADDER)       0.355       9.919
+ Arrival time                                                                        9.919                  (6 lvl)       
+
+ U2/reg1_syn_48.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              -0.035ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     0.035 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_48.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.849ns  (logic 6.042ns, net 3.807ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[3]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_45.a[0] (U7/Change_Time_b[4])                   net  (fanout = 1)       0.811 r     8.788                    
+ U2/reg1_syn_45.fco                                          cell (ADDER)            0.706 r     9.494
+ U2/reg1_syn_48.fci (U7/add0_syn_43)                         net  (fanout = 1)       0.000 f     9.494      ../../countdown_module.v(51)
+ U2/reg1_syn_48                                              path2reg1 (ADDER)       0.355       9.849
+ Arrival time                                                                        9.849                  (6 lvl)       
+
+ U2/reg1_syn_48.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.035ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/reg1_syn_45 (696 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     0.035 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_45.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.849ns  (logic 6.042ns, net 3.807ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[1]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_42.a[0] (U7/Change_Time_b[2])                   net  (fanout = 1)       0.811 r     8.788                    
+ U2/reg1_syn_42.fco                                          cell (ADDER)            0.706 r     9.494
+ U2/reg1_syn_45.fci (U7/add0_syn_41)                         net  (fanout = 1)       0.000 f     9.494      ../../countdown_module.v(51)
+ U2/reg1_syn_45                                              path2reg1 (ADDER)       0.355       9.849
+ Arrival time                                                                        9.849                  (6 lvl)       
+
+ U2/reg1_syn_45.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.035ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     0.038 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_45.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.846ns  (logic 6.036ns, net 3.810ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[0]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_39.a[1] (U7/Change_Time_b[1])                   net  (fanout = 1)       0.814 r     8.791                    
+ U2/reg1_syn_39.fco                                          cell (ADDER)            0.627 r     9.418
+ U2/reg1_syn_42.fci (U7/add0_syn_39)                         net  (fanout = 1)       0.000 f     9.418      ../../countdown_module.v(51)
+ U2/reg1_syn_42.fco                                          cell (ADDER)            0.073 r     9.491
+ U2/reg1_syn_45.fci (U7/add0_syn_41)                         net  (fanout = 1)       0.000 f     9.491      ../../countdown_module.v(51)
+ U2/reg1_syn_45                                              path2reg1 (ADDER)       0.355       9.846
+ Arrival time                                                                        9.846                  (6 lvl)       
+
+ U2/reg1_syn_45.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.038ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     0.114 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_45.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.770ns  (logic 5.963ns, net 3.807ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[2]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_42.a[1] (U7/Change_Time_b[3])                   net  (fanout = 1)       0.811 r     8.788                    
+ U2/reg1_syn_42.fco                                          cell (ADDER)            0.627 r     9.415
+ U2/reg1_syn_45.fci (U7/add0_syn_41)                         net  (fanout = 1)       0.000 f     9.415      ../../countdown_module.v(51)
+ U2/reg1_syn_45                                              path2reg1 (ADDER)       0.355       9.770
+ Arrival time                                                                        9.770                  (6 lvl)       
+
+ U2/reg1_syn_45.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.114ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/reg1_syn_42 (398 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (setup check):     0.111 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_42.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.773ns  (logic 5.963ns, net 3.810ns, 61% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U7/reg0_syn_233.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.571 r     0.717      ../../countdown_module.v(41)
+ U7/reg0_syn_233.f[0]                                        cell (LUT5)             0.424 r     1.141
+ U4/reg1_syn_129.a[1] (U4/reg1_syn_16)                       net  (fanout = 5)       0.688 r     1.829      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.424 r     2.253
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     3.035      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.459
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.414      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[0]                                         cell (MULT18)           3.563 r     7.977
+ U2/reg1_syn_39.a[1] (U7/Change_Time_b[1])                   net  (fanout = 1)       0.814 r     8.791                    
+ U2/reg1_syn_39.fco                                          cell (ADDER)            0.627 r     9.418
+ U2/reg1_syn_42.fci (U7/add0_syn_39)                         net  (fanout = 1)       0.000 f     9.418      ../../countdown_module.v(51)
+ U2/reg1_syn_42                                              path2reg1 (ADDER)       0.355       9.773
+ Arrival time                                                                        9.773                  (6 lvl)       
+
+ U2/reg1_syn_42.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.111ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     0.211 ns                                                        
+ Start Point:             U7/reg0_syn_252.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_42.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.673ns  (logic 5.887ns, net 3.786ns, 60% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_252.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_252.q[0]                                        clk2q                   0.146 r     0.146
+ U4/reg1_syn_134.a[0] (U7/reg0_syn_11)                       net  (fanout = 7)       0.634 r     0.780      ../../countdown_module.v(41)
+ U4/reg1_syn_134.f[0]                                        cell (LUT5)             0.424 r     1.204
+ U4/reg1_syn_129.c[1] (U4/reg1_syn_23)                       net  (fanout = 4)       0.601 r     1.805      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.348 r     2.153
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     2.935      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.359
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.314      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[0]                                         cell (MULT18)           3.563 r     7.877
+ U2/reg1_syn_39.a[1] (U7/Change_Time_b[1])                   net  (fanout = 1)       0.814 r     8.691                    
+ U2/reg1_syn_39.fco                                          cell (ADDER)            0.627 r     9.318
+ U2/reg1_syn_42.fci (U7/add0_syn_39)                         net  (fanout = 1)       0.000 f     9.318      ../../countdown_module.v(51)
+ U2/reg1_syn_42                                              path2reg1 (ADDER)       0.355       9.673
+ Arrival time                                                                        9.673                  (6 lvl)       
+
+ U2/reg1_syn_42.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.211ns          
+
+---------------------------------------------------------------------------------------------------------
+
+ Slack (setup check):     0.238 ns                                                        
+ Start Point:             U7/reg0_syn_256.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg1_syn_42.fci (falling edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         9.646ns  (logic 5.745ns, net 3.901ns, 59% logic)                
+ Logic Levels:            6 ( LUT5=3 ADDER=2 MULT18=1 )                                   
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U7/reg0_syn_256.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U7/reg0_syn_256.q[0]                                        clk2q                   0.146 r     0.146
+ U4/reg1_syn_134.e[0] (U7/reg0_syn_118)                      net  (fanout = 2)       0.749 r     0.895      ../../countdown_module.v(41)
+ U4/reg1_syn_134.f[0]                                        cell (LUT5)             0.282 r     1.177
+ U4/reg1_syn_129.c[1] (U4/reg1_syn_23)                       net  (fanout = 4)       0.601 r     1.778      ../../Digitron_NumDisplay.v(57)
+ U4/reg1_syn_129.f[1]                                        cell (LUT5)             0.348 r     2.126
+ U4/reg1_syn_149.a[1] (U7/TimerH_Set[1])                     net  (fanout = 7)       0.782 r     2.908      ../../countdown_module.v(21)
+ U4/reg1_syn_149.f[1]                                        cell (LUT5)             0.424 r     3.332
+ U7/mult0_syn_2.a[0] (U7/TimerH_Set[0])                      net  (fanout = 3)       0.955 r     4.287      ../../countdown_module.v(21)
+ U7/mult0_syn_2.p[0]                                         cell (MULT18)           3.563 r     7.850
+ U2/reg1_syn_39.a[1] (U7/Change_Time_b[1])                   net  (fanout = 1)       0.814 r     8.664                    
+ U2/reg1_syn_39.fco                                          cell (ADDER)            0.627 r     9.291
+ U2/reg1_syn_42.fci (U7/add0_syn_39)                         net  (fanout = 1)       0.000 f     9.291      ../../countdown_module.v(51)
+ U2/reg1_syn_42                                              path2reg1 (ADDER)       0.355       9.646
+ Arrival time                                                                        9.646                  (6 lvl)       
+
+ U2/reg1_syn_42.clk                                                                  0.000       0.000
+ capture clock edge                                                                 10.000      10.000
+ cell setup                                                                         -0.116       9.884
+ clock uncertainty                                                                  -0.000       9.884
+ clock recovergence pessimism                                                        0.000       9.884
+ Required time                                                                       9.884            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.238ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Hold checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point LED_Run[1]_syn_4 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.337 ns                                                        
+ Start Point:             U6/reg1_syn_46.clk (rising edge triggered by clock DeriveClock) 
+ End Point:               LED_Run[1]_syn_4.do[0] (rising edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.334ns  (logic 0.109ns, net 0.225ns, 32% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U6/reg1_syn_46.clk                                          clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U6/reg1_syn_46.q[0]                                         clk2q                   0.109 r     0.109
+ LED_Run[1]_syn_4.do[0] (LED_Run[2]_dup_3)                   net  (fanout = 4)       0.225 r     0.334      ../../responder.v(21)
+ LED_Run[1]_syn_4                                            path2reg                0.000       0.334
+ Arrival time                                                                        0.334                  (0 lvl)       
+
+ LED_Run[1]_syn_4.osclk                                                              0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                          -0.003      -0.003
+ clock uncertainty                                                                   0.000      -0.003
+ clock recovergence pessimism                                                        0.000      -0.003
+ Required time                                                                      -0.003            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.337ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point LED_Run[3]_syn_4 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.451 ns                                                        
+ Start Point:             U6/reg0_syn_138.clk (rising edge triggered by clock DeriveClock)
+ End Point:               LED_Run[3]_syn_4.do[0] (rising edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.448ns  (logic 0.109ns, net 0.339ns, 24% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U6/reg0_syn_138.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U6/reg0_syn_138.q[0]                                        clk2q                   0.109 r     0.109
+ LED_Run[3]_syn_4.do[0] (LED_Run[0]_dup_3)                   net  (fanout = 4)       0.339 r     0.448      ../../responder.v(21)
+ LED_Run[3]_syn_4                                            path2reg                0.000       0.448
+ Arrival time                                                                        0.448                  (0 lvl)       
+
+ LED_Run[3]_syn_4.osclk                                                              0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                          -0.003      -0.003
+ clock uncertainty                                                                   0.000      -0.003
+ clock recovergence pessimism                                                        0.000      -0.003
+ Required time                                                                      -0.003            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.451ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/TimerH_b1[0]_syn_11 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (hold check):      0.474 ns                                                        
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/TimerH_b1[0]_syn_11.ce (rising edge triggered by clock DeriveClock)
+ Clock group:             DeriveClock                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.535ns  (logic 0.162ns, net 0.373ns, 30% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.109 r     0.109
+ U2/TimerH_b1[0]_syn_11.ce (U1/Timer_Start)                  net  (fanout = 22)      0.373 r     0.482      ../../Sel_module.v(11)
+ U2/TimerH_b1[0]_syn_11                                      path2reg                0.053       0.535
+ Arrival time                                                                        0.535                  (0 lvl)       
+
+ U2/TimerH_b1[0]_syn_11.clk                                                          0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell hold                                                                           0.061       0.061
+ clock uncertainty                                                                   0.000       0.061
+ clock recovergence pessimism                                                        0.000       0.061
+ Required time                                                                       0.061            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.474ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Recovery checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point U2/reg0_syn_143 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (recovery check):  18.369 ns                                                       
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg0_syn_143.sr (rising edge triggered by clock DeriveClock) 
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         1.331ns  (logic 0.289ns, net 1.042ns, 21% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.146 r     0.146
+ U2/reg0_syn_143.sr (U1/Timer_Start)                         net  (fanout = 22)      1.042 r     1.188      ../../Sel_module.v(11)
+ U2/reg0_syn_143                                             path2reg                0.143       1.331
+ Arrival time                                                                        1.331                  (0 lvl)       
+
+ U2/reg0_syn_143.clk                                                                 0.000       0.000
+ capture clock edge                                                                 20.000      20.000
+ cell recovery                                                                      -0.300      19.700
+ clock uncertainty                                                                  -0.000      19.700
+ clock recovergence pessimism                                                        0.000      19.700
+ Required time                                                                      19.700            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              18.369ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/reg0_syn_128 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (recovery check):  18.369 ns                                                       
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg0_syn_128.sr (rising edge triggered by clock DeriveClock) 
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         1.331ns  (logic 0.289ns, net 1.042ns, 21% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.146 r     0.146
+ U2/reg0_syn_128.sr (U1/Timer_Start)                         net  (fanout = 22)      1.042 r     1.188      ../../Sel_module.v(11)
+ U2/reg0_syn_128                                             path2reg                0.143       1.331
+ Arrival time                                                                        1.331                  (0 lvl)       
+
+ U2/reg0_syn_128.clk                                                                 0.000       0.000
+ capture clock edge                                                                 20.000      20.000
+ cell recovery                                                                      -0.300      19.700
+ clock uncertainty                                                                  -0.000      19.700
+ clock recovergence pessimism                                                        0.000      19.700
+ Required time                                                                      19.700            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              18.369ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/reg0_syn_157 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (recovery check):  18.391 ns                                                       
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg0_syn_157.sr (rising edge triggered by clock DeriveClock) 
+ Clock group:             DeriveClock                                                     
+ Process:                 Slow                                                            
+ Data Path Delay:         1.309ns  (logic 0.289ns, net 1.020ns, 22% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.146 r     0.146
+ U2/reg0_syn_157.sr (U1/Timer_Start)                         net  (fanout = 22)      1.020 r     1.166      ../../Sel_module.v(11)
+ U2/reg0_syn_157                                             path2reg                0.143       1.309
+ Arrival time                                                                        1.309                  (0 lvl)       
+
+ U2/reg0_syn_157.clk                                                                 0.000       0.000
+ capture clock edge                                                                 20.000      20.000
+ cell recovery                                                                      -0.300      19.700
+ clock uncertainty                                                                  -0.000      19.700
+ clock recovergence pessimism                                                        0.000      19.700
+ Required time                                                                      19.700            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                              18.391ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Removal checks:
+---------------------------------------------------------------------------------------------------------
+Paths for end point U2/reg0_syn_152 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (removal check):   0.524 ns                                                        
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg0_syn_152.sr (rising edge triggered by clock DeriveClock) 
+ Clock group:             DeriveClock                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.777ns  (logic 0.196ns, net 0.581ns, 25% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.109 r     0.109
+ U2/reg0_syn_152.sr (U1/Timer_Start)                         net  (fanout = 22)      0.581 r     0.690      ../../Sel_module.v(11)
+ U2/reg0_syn_152                                             path2reg                0.087       0.777
+ Arrival time                                                                        0.777                  (0 lvl)       
+
+ U2/reg0_syn_152.clk                                                                 0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell removal                                                                        0.253       0.253
+ clock uncertainty                                                                   0.000       0.253
+ clock recovergence pessimism                                                        0.000       0.253
+ Required time                                                                       0.253            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.524ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/add0_syn_152 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (removal check):   0.524 ns                                                        
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/add0_syn_152.sr (rising edge triggered by clock DeriveClock) 
+ Clock group:             DeriveClock                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.777ns  (logic 0.196ns, net 0.581ns, 25% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.109 r     0.109
+ U2/add0_syn_152.sr (U1/Timer_Start)                         net  (fanout = 22)      0.581 r     0.690      ../../Sel_module.v(11)
+ U2/add0_syn_152                                             path2reg                0.087       0.777
+ Arrival time                                                                        0.777                  (0 lvl)       
+
+ U2/add0_syn_152.clk                                                                 0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell removal                                                                        0.253       0.253
+ clock uncertainty                                                                   0.000       0.253
+ clock recovergence pessimism                                                        0.000       0.253
+ Required time                                                                       0.253            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.524ns          
+
+---------------------------------------------------------------------------------------------------------
+
+Paths for end point U2/reg0_syn_134 (1 paths)
+---------------------------------------------------------------------------------------------------------
+ Slack (removal check):   0.575 ns                                                        
+ Start Point:             U4/reg1_syn_156.clk (rising edge triggered by clock DeriveClock)
+ End Point:               U2/reg0_syn_134.sr (rising edge triggered by clock DeriveClock) 
+ Clock group:             DeriveClock                                                     
+ Process:                 Fast                                                            
+ Data Path Delay:         0.828ns  (logic 0.196ns, net 0.632ns, 23% logic)                
+ Logic Levels:            0                                                               
+
+ Point                                                       Type                     Incr        Path      Info          
+---------------------------------------------------------------------------------------------------------
+ U4/reg1_syn_156.clk                                         clock                   0.000       0.000
+ launch clock edge                                                                   0.000       0.000
+ U4/reg1_syn_156.q[0]                                        clk2q                   0.109 r     0.109
+ U2/reg0_syn_134.sr (U1/Timer_Start)                         net  (fanout = 22)      0.632 r     0.741      ../../Sel_module.v(11)
+ U2/reg0_syn_134                                             path2reg                0.087       0.828
+ Arrival time                                                                        0.828                  (0 lvl)       
+
+ U2/reg0_syn_134.clk                                                                 0.000       0.000
+ capture clock edge                                                                  0.000       0.000
+ cell removal                                                                        0.253       0.253
+ clock uncertainty                                                                   0.000       0.253
+ clock recovergence pessimism                                                        0.000       0.253
+ Required time                                                                       0.253            
+---------------------------------------------------------------------------------------------------------
+ Slack                                                                               0.575ns          
+
+---------------------------------------------------------------------------------------------------------
+
+
+=========================================================================================================
+Timing summary:                                                                           
+---------------------------------------------------------------------------------------------------------
+Constraint path number: 18954 (STA coverage = 85.44%)
+Timing violations: 2 setup errors, and 0 hold errors.
+Minimal setup slack: -0.038, minimal hold slack: 0.337
+
+Timing group statistics: 
+	Clock constraints: 
+	  Clock Name                                  Min Period     Max Freq           Skew      Fanout            TNS
+	  DeriveClock (50.0MHz)                         20.076ns      49.811MHz        0.000ns       156       -0.038ns
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+
+
+Warning: No clock constraint on 10 clock net(s): 
+	CLK_dup_1
+	Set_Time_dup_1
+	U2/CLK1_syn_4
+	U4/SingleNum_b_n4_syn_10
+	U4/W_DigitronCS_Out_n_syn_4
+	U7/temp_time_b3[0]_syn_2
+	U7/temp_time_b3[3]_syn_2
+	U7/temp_time_b[1]_syn_4
+	U7/temp_time_b[4]_syn_2
+	U7/temp_time_b[5]_syn_3
+
+---------------------------------------------------------------------------------------------------------

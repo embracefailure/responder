@@ -1,0 +1,42 @@
+standard
+***Report Model: responder Device: EG4S20BG256***
+
+IO Statistics
+#IO                        39
+  #input                   13
+  #output                  26
+  #inout                    0
+
+Gate Statistics
+#Basic gates              353
+  #and                     39
+  #nand                     0
+  #or                      15
+  #nor                      0
+  #xor                      0
+  #xnor                     0
+  #buf                      0
+  #not                     45
+  #bufif1                   0
+  #MX21                    54
+  #FADD                     0
+  #DFF                    185
+  #LATCH                   15
+#MACRO_ADD                 31
+#MACRO_EQ                  18
+#MACRO_MULT                 1
+#MACRO_MUX                111
+
+Report Hierarchy Area:
++------------------------------------------------------+
+|Instance |Module              |gates  |seq    |macros |
++------------------------------------------------------+
+|top      |responder           |153    |200    |50     |
+|  U1     |Sel_module          |36     |36     |2      |
+|  U2     |Timer_module        |29     |43     |21     |
+|  U3     |Buzzer_module       |6      |27     |4      |
+|  U4     |Digitron_NumDisplay |5      |26     |7      |
+|  U5     |key_filter          |16     |28     |2      |
+|  U6     |led8_module         |0      |27     |3      |
+|  U7     |countdown_module    |58     |13     |11     |
++------------------------------------------------------+

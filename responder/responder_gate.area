@@ -1,0 +1,33 @@
+standard
+***Report Model: responder***
+
+IO Statistics
+#IO                    32
+  #input                7
+  #output              25
+  #inout                0
+
+Utilization Statistics
+#lut                  260   out of  19600    1.33%
+#reg                  149   out of  19600    0.76%
+#le                   271
+  #lut only           122   out of    271   45.02%
+  #reg only            11   out of    271    4.06%
+  #lut&reg            138   out of    271   50.92%
+#dsp                    0   out of     29    0.00%
+#bram                   0   out of     64    0.00%
+  #bram9k               0
+  #fifo9k               0
+#bram32k                0   out of     16    0.00%
+#pad                   32   out of    188   17.02%
+  #ireg                 4
+  #oreg                 8
+  #treg                 0
+#pll                    0   out of      4    0.00%
+
+Report Hierarchy Area:
++-----------------------------------------+
+|Instance |Module    |le    |lut   |seq   |
++-----------------------------------------+
+|top      |responder |271   |260   |149   |
++-----------------------------------------+

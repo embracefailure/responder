@@ -1,0 +1,640 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = C:/Anlogic/TD5.6.2/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     Timmy
+   Run Date =   Fri Jul 26 21:01:44 2024
+
+   Run on =     DESKTOP-A28VB3Q
+============================================================
+RUN-1002 : start command "open_project responder.prj"
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1002 : start command "set_param rtl rtl_sim_model on"
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |     on     |       off        |   *    
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../responder.v
+HDL-1007 : analyze verilog file ../../Sel_module.v
+HDL-1007 : analyze verilog file ../../Timer_module.v
+HDL-1007 : analyze verilog file ../../Buzzer_module.v
+HDL-1007 : analyze verilog file ../../Digitron_NumDisplay.v
+HDL-1007 : analyze verilog file ../../key_filter.v
+HDL-1007 : analyze verilog file ../../../../1 run_led/run_led/led8_module.v
+HDL-1007 : analyze verilog file ../../countdown_module.v
+RUN-1001 : Project manager successfully analyzed 8 source files.
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "elaborate -top responder"
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1002 : start command "set_param rtl rtl_sim_model on"
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |     on     |       off        |   *    
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : elaborate module responder in ../../responder.v(1)
+HDL-1007 : elaborate module key_filter in ../../key_filter.v(1)
+HDL-7007 CRITICAL-WARNING: no support for synthesis of mixed edge and level triggers; assuming level triggers only. in ../../key_filter.v(11)
+HDL-7007 CRITICAL-WARNING: 'cnt' should be on the sensitivity list in ../../key_filter.v(14)
+HDL-7007 CRITICAL-WARNING: 'cnt' should be on the sensitivity list in ../../key_filter.v(17)
+HDL-7007 CRITICAL-WARNING: no support for synthesis of mixed edge and level triggers; assuming level triggers only. in ../../key_filter.v(23)
+HDL-7007 CRITICAL-WARNING: 'cnt' should be on the sensitivity list in ../../key_filter.v(29)
+HDL-7007 CRITICAL-WARNING: 'key_in' should be on the sensitivity list in ../../key_filter.v(30)
+HDL-7007 CRITICAL-WARNING: 'key_reg0' should be on the sensitivity list in ../../key_filter.v(31)
+HDL-7007 CRITICAL-WARNING: 'key_reg1' should be on the sensitivity list in ../../key_filter.v(32)
+HDL-5007 WARNING: latch inferred for net 'key_reg0[3]' in ../../key_filter.v(23)
+HDL-1007 : elaborate module Sel_module in ../../Sel_module.v(1)
+HDL-1007 : elaborate module Timer_module in ../../Timer_module.v(1)
+HDL-7007 CRITICAL-WARNING: 'Block_Sel_Latched' should be on the sensitivity list in ../../Timer_module.v(96)
+HDL-7007 CRITICAL-WARNING: assignment under multiple clock edges is not supported for synthesis in ../../Timer_module.v(96)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 4 for port 'Change_Time' in ../../responder.v(65)
+HDL-1007 : elaborate module Buzzer_module in ../../Buzzer_module.v(1)
+HDL-1007 : elaborate module Digitron_NumDisplay in ../../Digitron_NumDisplay.v(1)
+HDL-5007 WARNING: latch inferred for net 'W_DigitronCS_Out[3]' in ../../Digitron_NumDisplay.v(38)
+HDL-5007 WARNING: latch inferred for net 'SingleNum[3]' in ../../Digitron_NumDisplay.v(57)
+HDL-1007 : elaborate module led8_module in ../../../../1 run_led/run_led/led8_module.v(1)
+HDL-1007 : elaborate module countdown_module in ../../countdown_module.v(1)
+HDL-7007 CRITICAL-WARNING: no support for synthesis of mixed edge and level triggers; assuming level triggers only. in ../../countdown_module.v(21)
+HDL-7007 CRITICAL-WARNING: 'K1' should be on the sensitivity list in ../../countdown_module.v(30)
+HDL-7007 CRITICAL-WARNING: 'temp_time' should be on the sensitivity list in ../../countdown_module.v(31)
+HDL-7007 CRITICAL-WARNING: 'K2' should be on the sensitivity list in ../../countdown_module.v(32)
+HDL-7007 CRITICAL-WARNING: 'temp_time' should be on the sensitivity list in ../../countdown_module.v(33)
+HDL-7007 CRITICAL-WARNING: 'temp_time' should be on the sensitivity list in ../../countdown_module.v(36)
+HDL-7007 CRITICAL-WARNING: 'temp_time' should be on the sensitivity list in ../../countdown_module.v(37)
+HDL-7007 CRITICAL-WARNING: 'temp_time' should be on the sensitivity list in ../../countdown_module.v(38)
+HDL-5007 WARNING: latch inferred for net 'Change_Time[3]' in ../../countdown_module.v(21)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 4 for port 'Change_Time' in ../../responder.v(105)
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-1200 : Current top model is responder
+HDL-5105 WARNING: Improper initial value, net "cnt[19]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[18]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[17]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[16]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[15]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[14]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[13]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[12]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[11]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 WARNING: Improper initial value, net "cnt[10]" initial value we do not reserve in ../../key_filter.v(12) 
+HDL-5105 Similar messages will be suppressed.
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "export_db responder_elaborate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1002 : start command "read_adc ../../responder.adc"
+RUN-1002 : start command "set_pin_assignment  Buzzer_Out   LOCATION = H11; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  CLK   LOCATION = R7; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  DigitronCS_Out[0]   LOCATION = C9; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  DigitronCS_Out[1]   LOCATION = B6; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  DigitronCS_Out[2]   LOCATION = A5; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  DigitronCS_Out[3]   LOCATION = A3; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[0]   LOCATION = A4; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[1]   LOCATION = A6; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[2]   LOCATION = B8; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[3]   LOCATION = E8; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[4]   LOCATION = A7; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[5]   LOCATION = B5; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[6]   LOCATION = A8; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Digitron_Out[7]   LOCATION = C8; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_In[0]   LOCATION = E11; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_In[1]   LOCATION = D11; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_In[2]   LOCATION = C11; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_In[3]   LOCATION = F10; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  LED_Out[0]   LOCATION = D3; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  LED_Out[1]   LOCATION = E4; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  LED_Out[2]   LOCATION = C1; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  LED_Out[3]   LOCATION = C2; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  LED_OverTime_Out   LOCATION = F16; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  RSTn   LOCATION = A9; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Set_Time   LOCATION = A10; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_Row[0]   LOCATION = D9; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_Row[1]   LOCATION = F9; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_Row[2]   LOCATION = C10; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  Key_Row[3]   LOCATION = E10; IOSTANDARD = LVCMOS33; "
+RUN-1002 : start command "set_pin_assignment  LED_Run[0]   LOCATION = B14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  LED_Run[1]   LOCATION = B15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  LED_Run[2]   LOCATION = B16; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  LED_Run[3]   LOCATION = C15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO vref setups legality check.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file C:/Anlogic/TD5.6.2/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1002 : start command "set_param rtl rtl_sim_model on"
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |     on     |       off        |   *    
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+SYN-1012 : SanityCheck: Model "responder"
+SYN-1012 : SanityCheck: Model "Sel_module"
+SYN-1012 : SanityCheck: Model "Timer_module"
+SYN-1012 : SanityCheck: Model "Buzzer_module"
+SYN-1012 : SanityCheck: Model "Digitron_NumDisplay"
+SYN-1012 : SanityCheck: Model "key_filter"
+SYN-1012 : SanityCheck: Model "led8_module"
+SYN-1012 : SanityCheck: Model "countdown_module"
+SYN-1011 : Flatten model responder
+SYN-5033 CRITICAL-WARNING: The model (responder) has (21) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[19]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[19]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[19]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (20) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[18]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[18]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[18]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (19) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[17]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[17]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[17]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (18) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[16]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[16]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[16]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (17) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[15]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[15]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[15]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (16) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[14]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[14]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[14]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (15) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[13]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[13]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[13]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (14) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[12]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[12]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[12]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (13) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[11]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[11]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[11]>   // ../../key_filter.v(10)
+
+SYN-5033 CRITICAL-WARNING: The model (responder) has (12) unstable comb insts loops, print one loop:
+		<Inst: U5/add0> <Inpin: U5/add0.i0[10]> <Outpin: U5/add0.o[19]>   // ../../key_filter.v(17)
+		<Net: U5/cnt_b1[19]>   
+		<Inst: U5/mux0> <Inpin: U5/mux0.i0[19]> <Outpin: U5/mux0.o[19]>   // ../../key_filter.v(14)
+		<Net: U5/cnt_b[19]>   
+		<Inst: U5/mux1> <Inpin: U5/mux1.i0[19]> <Outpin: U5/mux1.o[10]>   // ../../key_filter.v(12)
+		<Net: U5/cnt[10]>   // ../../key_filter.v(10)
+
+SYN-5033 Similar messages will be suppressed.
+SYN-1032 : 989/44 useful/useless nets, 312/1 useful/useless insts
+SYN-1001 : Optimize 9 less-than instances
+SYN-1016 : Merged 69 instances.
+SYN-1032 : 748/195 useful/useless nets, 194/68 useful/useless insts
+SYN-1016 : Merged 44 instances.
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg1_syn_2", d: "U4/sel2_syn_2[0]", q: "U4/SingleNum[0]" // ../../Digitron_NumDisplay.v(57)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg1_syn_3", d: "U4/sel2_syn_2[1]", q: "U4/SingleNum[1]" // ../../Digitron_NumDisplay.v(57)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg1_syn_4", d: "U4/sel2_syn_2[2]", q: "U4/SingleNum[2]" // ../../Digitron_NumDisplay.v(57)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg1_syn_5", d: "U4/sel2_syn_2[3]", q: "U4/SingleNum[3]" // ../../Digitron_NumDisplay.v(57)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg2_syn_2", d: "U4/W_DigitronCS_Out_b[0]", q: "DigitronCS_Out[0]" // ../../Digitron_NumDisplay.v(38)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg2_syn_3", d: "U4/W_DigitronCS_Out_b[1]", q: "DigitronCS_Out[1]" // ../../Digitron_NumDisplay.v(38)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg2_syn_4", d: "U4/W_DigitronCS_Out_b[2]", q: "DigitronCS_Out[2]" // ../../Digitron_NumDisplay.v(38)
+SYN-5015 WARNING: Found latch in "responder", name: "U4/reg2_syn_5", d: "U4/W_DigitronCS_Out_b[3]", q: "DigitronCS_Out[3]" // ../../Digitron_NumDisplay.v(38)
+SYN-5015 WARNING: Found latch in "responder", name: "U5/reg0_syn_2", d: "Key_In[0]", q: "U5/key_reg0[0]" // ../../key_filter.v(23)
+SYN-5015 WARNING: Found latch in "responder", name: "U5/reg0_syn_3", d: "Key_In[1]", q: "U5/key_reg0[1]" // ../../key_filter.v(23)
+SYN-5015 Similar messages will be suppressed.
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1032 : 718/2 useful/useless nets, 570/93 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1017 : Remove 2 const input seq instances
+SYN-1002 :     U3/reg1_syn_11
+SYN-1002 :     U7/reg1_syn_3
+SYN-1019 : Optimized 8 mux instances.
+SYN-1020 : Optimized 73 distributor mux.
+SYN-1001 : Optimize 1 less-than instances
+SYN-1016 : Merged 134 instances.
+SYN-1015 : Optimize round 1, 447 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 1 inv instances.
+SYN-1032 : 550/1 useful/useless nets, 402/96 useful/useless insts
+SYN-1015 : Optimize round 2, 97 better
+SYN-3003 : Optimized 1 equivalent DFF(s)
+SYN-1032 : 548/2 useful/useless nets, 400/1 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+RUN-1002 : start command "write_verilog simulation/responder_rtl_sim.v"
+HDL-1201 : write out verilog file simulation/responder_rtl_sim.v
+RUN-1003 : finish command "write_verilog simulation/responder_rtl_sim.v" in  1.056849s wall, 0.437500s user + 0.000000s system = 0.437500s CPU (41.4%)
+
+RUN-1004 : used memory is 99 MB, reserved memory is 65 MB, peak memory is 103 MB
+RUN-1002 : start command "report_area -file responder_rtl.area"
+RUN-1001 : standard
+***Report Model: responder Device: EG4S20BG256***
+
+IO Statistics
+#IO                        33
+  #input                    7
+  #output                  26
+  #inout                    0
+
+Gate Statistics
+#Basic gates              253
+  #and                     28
+  #nand                     0
+  #or                       5
+  #nor                      0
+  #xor                      0
+  #xnor                     0
+  #buf                      0
+  #not                     27
+  #bufif1                   0
+  #MX21                    24
+  #FADD                     0
+  #DFF                    144
+  #LATCH                   25
+#MACRO_ADD                 14
+#MACRO_EQ                  16
+#MACRO_MUX                 95
+
+Report Hierarchy Area:
++------------------------------------------------------+
+|Instance |Module              |gates  |seq    |macros |
++------------------------------------------------------+
+|top      |responder           |84     |169    |30     |
+|  U1     |Sel_module          |37     |36     |2      |
+|  U2     |Timer_module        |12     |36     |8      |
+|  U3     |Buzzer_module       |6      |27     |4      |
+|  U4     |Digitron_NumDisplay |5      |26     |7      |
+|  U5     |key_filter          |16     |8      |2      |
+|  U6     |led8_module         |0      |27     |3      |
+|  U7     |countdown_module    |8      |9      |4      |
++------------------------------------------------------+
+
+RUN-1002 : start command "export_db responder_rtl.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1002 : start command "optimize_gate -packsim simulation/responder_gate_sim.v -maparea responder_gate.area"
+RUN-1001 : Open license file C:/Anlogic/TD5.6.2/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1002 : start command "set_param gate gate_sim_model on"
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :         cascade_dsp         |    off     |       off        |        
+RUN-1001 :         cascade_eram        |    off     |       off        |        
+RUN-1001 :        gate_sim_model       |     on     |       off        |   *    
+RUN-1001 :        map_sim_model        |    off     |       off        |        
+RUN-1001 :         map_strategy        |     1      |        1         |        
+RUN-1001 :           opt_area          |   medium   |      medium      |        
+RUN-1001 :          opt_timing         |    auto    |       auto       |        
+RUN-1001 :         pack_effort         |   medium   |      medium      |        
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        |        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        |        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       |        
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        |        
+RUN-1001 :            report           |  standard  |     standard     |        
+RUN-1001 :           retiming          |    off     |       off        |        
+RUN-1001 : ------------------------------------------------------------------
+SYN-2001 : Map 33 IOs to PADs
+SYN-1032 : 577/4 useful/useless nets, 429/4 useful/useless insts
+RUN-1002 : start command "update_pll_param -module responder"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-1001 : Throwback 34 control mux instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 10 instances.
+SYN-2501 : Optimize round 1, 164 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 14 macro adder
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 15 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-2501 : Inferred 8 ROM instances
+SYN-1019 : Optimized 2 mux instances.
+SYN-1016 : Merged 24 instances.
+SYN-1032 : 1002/7 useful/useless nets, 855/0 useful/useless insts
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=5, #lut = 167 (3.16), #lev = 4 (2.94)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 167 (3.16), #lev = 4 (2.94)
+SYN-3001 : Logic optimization runtime opt =   0.02 sec, map =   0.00 sec
+SYN-3001 : Mapper mapped 488 instances into 172 LUTs, name keeping = 67%.
+RUN-1002 : start command "report_area -file responder_gate.area"
+RUN-1001 : standard
+***Report Model: responder Device: EG4S20BG256***
+
+IO Statistics
+#IO                        33
+  #input                    7
+  #output                  26
+  #inout                    0
+
+LUT Statistics
+#Total_luts               318
+  #lut4                   160
+  #lut5                    20
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b             138
+
+Utilization Statistics
+#lut                      318   out of  19600    1.62%
+#reg                      165   out of  19600    0.84%
+#le                         0
+#dsp                        0   out of     29    0.00%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       33   out of    188   17.55%
+  #ireg                     4
+  #oreg                    14
+  #treg                     0
+#pll                        0   out of      4    0.00%
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------+
+|Instance |Module              |lut     |ripple  |seq     |bram    |dsp     |
++---------------------------------------------------------------------------+
+|top      |responder           |180     |138     |183     |0       |0       |
+|  U1     |Sel_module          |40      |26      |36      |0       |0       |
+|  U2     |Timer_module        |38      |26      |36      |0       |0       |
+|  U3     |Buzzer_module       |17      |24      |27      |0       |0       |
+|  U4     |Digitron_NumDisplay |40      |17      |26      |0       |0       |
+|  U5     |key_filter          |14      |21      |4       |0       |0       |
+|  U6     |led8_module         |21      |24      |27      |0       |0       |
+|  U7     |countdown_module    |10      |0       |9       |0       |0       |
++---------------------------------------------------------------------------+
+
+SYN-1001 : Packing model "responder" ...
+SYN-4010 : Pack lib has 58 rtl pack models with 25 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 165 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 3 carry chain into lslice
+SYN-4007 : Packing 62 adder to BLE ...
+SYN-4008 : Packed 62 adder and 23 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+SYN-4012 : Packed 0 FxMUX
+RUN-1002 : start command "write_verilog simulation/responder_gate_sim.v"
+HDL-1201 : write out verilog file simulation/responder_gate_sim.v
+RUN-1003 : finish command "optimize_gate -packsim simulation/responder_gate_sim.v -maparea responder_gate.area" in  1.223864s wall, 0.515625s user + 0.000000s system = 0.515625s CPU (42.1%)
+
+RUN-1004 : used memory is 104 MB, reserved memory is 68 MB, peak memory is 108 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1011 : Flatten model responder
+RUN-1002 : start command "export_db responder_gate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1002 : start command "backup_run_log run.log ../.logs/syn_1/td_20240726_210144.log"

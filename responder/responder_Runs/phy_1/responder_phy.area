@@ -1,0 +1,111 @@
+standard
+***Report Model: responder Device: EG4S20BG256***
+
+IO Statistics
+#IO                        39
+  #input                   13
+  #output                  26
+  #inout                    0
+
+Utilization Statistics
+#lut                      339   out of  19600    1.73%
+#reg                      207   out of  19600    1.06%
+#le                       354
+  #lut only               147   out of    354   41.53%
+  #reg only                15   out of    354    4.24%
+  #lut&reg                192   out of    354   54.24%
+#dsp                        1   out of     29    3.45%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       39   out of    188   20.74%
+  #ireg                     4
+  #oreg                    14
+  #treg                     0
+#pll                        0   out of      4    0.00%
+#gclk                       8   out of     16   50.00%
+
+Clock Resource Statistics
+Index     ClockNet                 Type               DriverType         Driver                          Fanout
+#1        CLK_dup_1                GCLK               io                 CLK_syn_2.di                    113
+#2        Set_Time_dup_1           GCLK               io                 Set_Time_syn_2.di               16
+#3        U2/CLK1                  GCLK               mslice             U2/CLK1_reg_syn_32.q0           9
+#4        U4/W_DigitronCS_Out_n    GCLK               mslice             U4/reg2_syn_26.f1               7
+#5        U4/SingleNum_b_n4        GCLK               mslice             U4/reg1_syn_161.f0              3
+#6        U7/temp_time_b3[0]       GCLK               mslice             U7/temp_time_b1[2]_syn_21.f0    2
+#7        U7/temp_time_b3[3]       GCLK               lslice             U7/temp_time_b[1]_syn_9.f0      2
+#8        U7/temp_time_b[1]        GCLK               mslice             U7/reg0_syn_268.f0              2
+#9        U7/temp_time_b[4]        GCLK               lslice             U7/temp_time_b1[3]_syn_10.f0    2
+#10       U7/temp_time_b[5]        GCLK               lslice             U7/temp_time_b1[2]_syn_23.f0    2
+
+
+Detailed IO Report
+
+        Name           Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+         CLK             INPUT         R7        LVCMOS33          N/A          PULLUP      NONE    
+      Key_In[3]          INPUT        F10        LVCMOS33          N/A          PULLUP      IREG    
+      Key_In[2]          INPUT        C11        LVCMOS33          N/A          PULLUP      IREG    
+      Key_In[1]          INPUT        D11        LVCMOS33          N/A          PULLUP      IREG    
+      Key_In[0]          INPUT        E11        LVCMOS33          N/A          PULLUP      IREG    
+        RSTn             INPUT         A9        LVCMOS33          N/A          PULLUP      NONE    
+      Sel_Time1          INPUT        B10        LVCMOS33          N/A          PULLUP      NONE    
+      Sel_Time2          INPUT        A11        LVCMOS33          N/A          PULLUP      NONE    
+      Sel_Time3          INPUT        A12        LVCMOS33          N/A          PULLUP      NONE    
+      Sel_Time4          INPUT        B12        LVCMOS33          N/A          PULLUP      NONE    
+      Sel_Time5          INPUT        A13        LVCMOS33          N/A          PULLUP      NONE    
+      Sel_Time6          INPUT        A14        LVCMOS33          N/A          PULLUP      NONE    
+      Set_Time           INPUT        A10        LVCMOS33          N/A          PULLUP      NONE    
+     Buzzer_Out         OUTPUT        H11        LVCMOS33           8            NONE       OREG    
+  DigitronCS_Out[3]     OUTPUT         A3        LVCMOS33           8            NONE       OREG    
+  DigitronCS_Out[2]     OUTPUT         A5        LVCMOS33           8            NONE       OREG    
+  DigitronCS_Out[1]     OUTPUT         B6        LVCMOS33           8            NONE       OREG    
+  DigitronCS_Out[0]     OUTPUT         C9        LVCMOS33           8            NONE       OREG    
+   Digitron_Out[7]      OUTPUT         C8        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[6]      OUTPUT         A8        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[5]      OUTPUT         B5        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[4]      OUTPUT         A7        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[3]      OUTPUT         E8        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[2]      OUTPUT         B8        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[1]      OUTPUT         A6        LVCMOS33           8            NONE       NONE    
+   Digitron_Out[0]      OUTPUT         A4        LVCMOS33           8            NONE       NONE    
+     Key_Row[3]         OUTPUT        E10        LVCMOS33           8            NONE       NONE    
+     Key_Row[2]         OUTPUT        C10        LVCMOS33           8            NONE       NONE    
+     Key_Row[1]         OUTPUT         F9        LVCMOS33           8            NONE       NONE    
+     Key_Row[0]         OUTPUT         D9        LVCMOS33           8            NONE       NONE    
+     LED_Out[3]         OUTPUT         C2        LVCMOS33           8            NONE       OREG    
+     LED_Out[2]         OUTPUT         C1        LVCMOS33           8            NONE       OREG    
+     LED_Out[1]         OUTPUT         E4        LVCMOS33           8            NONE       OREG    
+     LED_Out[0]         OUTPUT         D3        LVCMOS33           8            NONE       OREG    
+  LED_OverTime_Out      OUTPUT        F16        LVCMOS33           8            NONE       OREG    
+     LED_Run[3]         OUTPUT        C15        LVCMOS33           8            NONE       OREG    
+     LED_Run[2]         OUTPUT        B16        LVCMOS33           8            NONE       OREG    
+     LED_Run[1]         OUTPUT        B15        LVCMOS33           8            NONE       OREG    
+     LED_Run[0]         OUTPUT        B14        LVCMOS33           8            NONE       OREG    
+
+Report Hierarchy Area:
++-----------------------------------------------------------------------------------+
+|Instance |Module              |le     |lut     |ripple  |seq     |bram    |dsp     |
++-----------------------------------------------------------------------------------+
+|top      |responder           |354    |283     |56      |225     |0       |1       |
+|  U1     |Sel_module          |59     |52      |7       |35      |0       |0       |
+|  U2     |Timer_module        |70     |59      |11      |43      |0       |0       |
+|  U3     |Buzzer_module       |39     |21      |6       |28      |0       |0       |
+|  U4     |Digitron_NumDisplay |78     |69      |9       |30      |0       |0       |
+|  U5     |key_filter          |31     |20      |11      |21      |0       |0       |
+|  U6     |led8_module         |47     |35      |12      |27      |0       |0       |
+|  U7     |countdown_module    |30     |27      |0       |23      |0       |1       |
++-----------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout    Nets  
+    #1         1       235   
+    #2         2       175   
+    #3         3        30   
+    #4         4        20   
+    #5        5-10      40   
+    #6       11-50      8    
+    #7       51-100     1    
+  Average     2.34           

@@ -1,0 +1,36 @@
+=========================================================================================================
+Auto created by Tang Dynasty v5.6.56362
+Copyright (c) 2012-2022 Anlogic
+Tue Nov 28 14:11:42 2023
+=========================================================================================================
+
+
+Top Model:                responder                                                       
+Device:                   eagle_s20                                                       
+Timing Constraint File:                                                                   
+STA Level:                Detail                                                          
+Speed Grade:              NA                                                              
+
+=========================================================================================================
+Timing summary:                                                                           
+---------------------------------------------------------------------------------------------------------
+Constraint path number: 0 (STA coverage = 0.00%)
+Timing violations: 0 setup errors, and 0 hold errors.
+Minimal setup slack: infinity, minimal hold slack: infinity
+
+Timing group statistics: 
+	Clock constraints: 
+	  No constraint path
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+
+
+Warning: No clock constraint on 5 clock net(s): 
+	CLK_dup_1
+	U2/CLK1_syn_4
+	U4/SingleNum_b_n4_syn_10
+	U4/W_DigitronCS_Out_n_syn_3
+	U4/W_Digitron_Out_n_syn_11
+
+---------------------------------------------------------------------------------------------------------

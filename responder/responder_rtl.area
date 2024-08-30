@@ -1,0 +1,34 @@
+standard
+***Report Model: responder***
+
+IO Statistics
+#IO                    32
+  #input                7
+  #output              25
+  #inout                0
+
+Gate Statistics
+#Basic gates          257
+  #and                 43
+  #nand                 0
+  #or                  17
+  #nor                  0
+  #xor                  0
+  #xnor                 0
+  #buf                  0
+  #not                 28
+  #bufif1               0
+  #MX21                 8
+  #FADD                 0
+  #DFF                145
+  #LATCH               16
+#MACRO_ADD              9
+#MACRO_EQ              18
+#MACRO_MUX             82
+
+Report Hierarchy Area:
++--------------------------------------------+
+|Instance |Module    |gates  |seq    |macros |
++--------------------------------------------+
+|top      |responder |96     |161    |27     |
++--------------------------------------------+
